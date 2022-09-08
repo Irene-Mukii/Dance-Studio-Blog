@@ -156,13 +156,19 @@ body.light-theme{
     box-shadow: 0 1px .5rem var(--transparent-light-color);
 }
 .menu.activated{
-    box-shadow: 1px 1px .5rem var(--transparent-light-color);
+    box-shadow: 1px 1px 1rem var(--transparent-light-color);
     opacity: 1;
-    transform: scale(1s);
+    transform: scale(1);
 }
 .menu-toggle-icon.activated .open-menu-icon{
     display: none;
 }
-.menu-toggle-icon.activated .closed-menu-icon{
+.menu-toggle-icon.activated .close-menu-icon{
+    display: block;
+}
+.theme-toggle-button.activated  .sun-icon{
+    display: none;
+}
+.theme-toggle-button.activated  .moon-icon{
     display: block;
 }
