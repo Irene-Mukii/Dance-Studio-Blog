@@ -12,7 +12,8 @@
     --transparent-dark-color: rgba(0,0,0,.75);
     --font-family: 'Poppins', Sans-serif;
     /**/
-    --font-size-xsm: 1.2rem;
+    --font-size-xsm: 1.2rem;  
+    /*https://developer.mozilla.org/en-US/docs/Learn/CSS/Building_blocks/Values_and_units*/
     --font-size-sm: 1.6rem;
     --font-size-md: 2.4rem;
     --font-size-lg: 3rem;
@@ -49,7 +50,7 @@ a{
 }
 img{
     max-width: 100%;
-    display: block;
+    display: block;   /*check and understand block*/
 }
 ul{
     list-style: none;
@@ -60,7 +61,7 @@ button{
     color: inherit;
     border: none;
     background-color: transparent;
-    outline: none;
+    outline: none;            /*check and understand outline*/
 }
 i{
     font-size: var(--font-size-md);
@@ -96,7 +97,7 @@ body.light-theme{
     top: 0;
     left:0;
     width: 100%;
-    z-index: 999; /*research on z-index*/
+    z-index: 999; 
 }
 .navbar{
     display: flex;
@@ -116,8 +117,10 @@ body.light-theme{
     padding: 1.5rem;
     background-color: var(--secondary-background-color);
     opacity: 0;
-    transform: scale(0);
-    transition: opacity .25s ease-in; /*research on opacity*/
+
+    transform: scale(0); /*Scaling/zooming animations are problematic for accessibility, as they are a common trigger for certain types of migraine. If you need to include such animations on your website, you should provide a control to allow users to turn off animations, preferably site-wide.*/
+
+    transition: opacity .25s ease-in; /*property, duration(over which transitions should occur), timing(how intermediate values are computed --can bounce, have a sharp ending etc),delay(how long to wait before starting transition)*/
 }
 .list{
     display: flex;
@@ -171,4 +174,59 @@ body.light-theme{
 }
 .theme-toggle-button.activated  .moon-icon{
     display: block;
+}
+/*Search*/
+.search-form-container{
+    width: 100%;
+    max-width: 100%;
+    height:100vh;         /*research difference between such*/
+    background-color: var(--primary-background-color);
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index:9999; 
+    display: flex;
+    /* opacity: 0;
+    transform: scale(0); */
+    transition: opacity .5s;
+}
+.form-container-inner{
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap); 
+    text-align: center;
+}
+.form{
+    display: flex;
+    justify-content: center;
+    
+}
+.form-input,
+.form-btn{
+    display: inline-block;                      /*check and understand inline*/
+    border: 2px solid var(--secondary-background-color);
+    padding: 1.5rem;
+}
+.form-input{
+    border-right: none;
+    width: 100%;
+}
+.form-btn{
+    margin-left: -.5rem;
+    border-left: none;
+    background-color: var(--secondary-background-color);
+    width: 8rem;
+}
+.form-note{
+    font-size: var(--font-size-xsm);
+    align-self: flex-end;
+}
+.form-close-btn{
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    border: 2px solid var(--secondary-background-color);
+    width: 4rem;
+    height: 4rem;
 }

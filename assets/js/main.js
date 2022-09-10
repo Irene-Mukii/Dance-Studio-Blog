@@ -5,6 +5,7 @@ const selectElement = selector =>{
     throw new Error(`Something went wrong, makesure that ${selector} exists or is typed correctly.`);
 };
 
+
 //Nav styles on scroll
 const scrollHeader = ()=> {
     const headerElement= selectElement('#header');
@@ -16,6 +17,8 @@ const scrollHeader = ()=> {
 };
 // window.addEventListener('scroll', scrollHeader); //test for header change upon scroll
 
+
+
 //open menue and search pop-up
 const menuToggleIcon = selectElement('#menu-toggle-icon');
 
@@ -25,6 +28,7 @@ const toggleMenu = () => {
     menuToggleIcon.classList.toggle("activated");
 };
 menuToggleIcon.addEventListener('click', toggleMenu);
+
 
 //switch theme/add to local storage
 const bodyElement = selectElement('body');
@@ -38,11 +42,14 @@ if (currentTheme){
 const toggleTheme = () => {
     themeToggleBtn.classList.toggle('activated');
     bodyElement.classList.toggle('light-theme');
-    if(bodyElement.classList.contains('light-theme')){
+    if(bodyElement.classList.contains('light-theme')){            ////making it such that if you reload page the theme you had selected doesnt disappear
         localStorage.setItem('currentTheme', 'themeActive')
     }else{
         localStorage.removeItem('currentTheme');
     }
 }
 themeToggleBtn.addEventListener('click',toggleTheme);
+
+
+//Swiper
 
