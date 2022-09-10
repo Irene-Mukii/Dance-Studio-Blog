@@ -52,9 +52,11 @@ themeToggleBtn.addEventListener('click',toggleTheme);
 
 //open and close our search form --MINES :)
 
-selectElement('#search-icon').addEventListener('click', ()=> selectElement('#search-form-container').classList.add('activated'));
+const formOpenBtn = selectElement('#search-icon')
+formOpenBtn.addEventListener('click', ()=> selectElement('#search-form-container').classList.add('activated'));
 
-selectElement('#form-close-btn').addEventListener('click',()=>selectElement('#search-form-container').classList.remove('activated'));
+const formCloseBtn = selectElement('#form-close-btn')
+formCloseBtn.addEventListener('click', ()=> selectElement('#search-form-container').classList.remove('activated'));
 
 
 //Swiper
