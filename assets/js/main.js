@@ -51,13 +51,18 @@ const toggleTheme = () => {
 themeToggleBtn.addEventListener('click',toggleTheme);
 
 //open and close our search form --MINES :)
-
+const searchFormContainer = selectElement('#search-form-container')
 const formOpenBtn = selectElement('#search-icon')
-formOpenBtn.addEventListener('click', ()=> selectElement('#search-form-container').classList.add('activated'));
+formOpenBtn.addEventListener('click', ()=> searchFormContainer.classList.add('activated'));
 
 const formCloseBtn = selectElement('#form-close-btn')
-formCloseBtn.addEventListener('click', ()=> selectElement('#search-form-container').classList.remove('activated'));
+formCloseBtn.addEventListener('click', ()=> searchFormContainer.classList.remove('activated'));
 
+//closing searchform when ESC is hit
+
+window.addEventListener('keyup', event => {
+    if(event.key === 'Escape')searchFormContainer.classList.remove('activated')
+})
 
 //Swiper
 
