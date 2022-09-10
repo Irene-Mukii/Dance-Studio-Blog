@@ -410,3 +410,37 @@ body.light-theme{
 .trending-news-box:hover .article-title{
     color: var(--light-color-alt);
 }
+
+/*quick read*/
+
+.section-title{
+    position: relative;
+    font-size: var(--font-size-md);
+    margin-bottom: 6rem;
+}
+
+.section-title::before{      /*Check what before and attr is all about*/
+    content: attr(data-name);    
+    font-size: var(--font-size-lg);
+    text-transform: uppercase;
+    opacity: .1;
+    position: absolute;
+    top: 1.5rem;
+    left: 2rem;
+}
+
+.article.swiper-slide{
+    height: 40rem;
+}
+.swiper-wrapper{
+    height: auto;
+}
+.swiper-controls{
+    width: 3.5rem;
+    height: 3.5rem;
+    background-color: var(--secondary-background-color);
+}
+.swiper-controls::after{
+    font-size: 1.6rem;
+    color: var(--light-color);
+}
