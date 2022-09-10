@@ -50,6 +50,13 @@ const toggleTheme = () => {
 }
 themeToggleBtn.addEventListener('click',toggleTheme);
 
+//open and close our search form --MINES :)
+const toggleSearchForm = ()=> {
+    selectElement('#search-form-container').classList.toggle('activated');
+}
+
+selectElement('#search-icon').addEventListener('click', toggleSearchForm);
+
 
 //Swiper
 
