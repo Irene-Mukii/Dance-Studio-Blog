@@ -656,6 +656,7 @@ body.light-theme{
 
  .author-image-box{
     position: relative;
+    height: var(--item-min-height-sm);
  }
 
  .author-about{
@@ -679,3 +680,44 @@ body.light-theme{
     margin-top: auto;
     margin-bottom: 0;
  }
+
+ /*  Media queries */
+
+ @media screen and (min-width: 700px) {
+    .trending-news-box{
+        flex-direction: row;
+        align-items: center;
+    }
+
+    .trending-news-image-box{
+        width: 50;
+    }
+
+    .trending-news-data{
+        margin: auto;
+        text-align: center;
+    }
+
+    .newsletter-description{
+        max-width: 40rem;
+    }
+    
+    .popular-tags-container,
+    .footer-container{
+        grid-template-columns:repeat(2, 1fr) ;  /*what do we mean by 1 fraction each*/
+    }
+
+    .form-container-inner{
+        align-items: center;
+    }
+
+    .company-data{
+        order: 0;
+    }
+
+    .author{
+        grid-template-columns: 25rem 1fr;
+    }
+
+ }
+
