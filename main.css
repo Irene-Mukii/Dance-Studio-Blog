@@ -508,6 +508,7 @@ body.light-theme{
 
 .popular-tags-container .article{
     min-height: var(--item-min-height-sm);
+    overflow: hidden;
 }
 
 .tag-name{
@@ -516,10 +517,30 @@ body.light-theme{
     left: 50%;
     transform: translate(-50%, -50%);
     background-color: var(--transparent-dark-color);
+    padding: 1rem 2rem;
     z-index: 10;
 }
 
+.popular-tags-container .article:hover .tag-name{
+    color: var(--light-color);
+}
 
+.popular-tags-container .article:hover .article-image{
+    transform: scale(1.05);
+}
+
+/*Newsletter*/
+.newsletter{
+    padding-bottom: 6rem;
+}
+.newsletter-title{
+    font-size: var(--font-size-lg);
+    padding: 4rem;
+}
+.newsletter-description{
+    font-size: 2rem;
+    padding-bottom: 4rem;
+}
 
 
 
