@@ -600,3 +600,82 @@ body.light-theme{
  ::-webkit-scrollbar-thumb:hover{
     background-color: #2e303b;
  }
+
+ /*posts styles*/
+ .blog-post{
+    padding-bottom: 5rem;
+ }
+ 
+ .blog-post-data{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding-block: 2.5rem;
+ }
+
+ .blog-post-title{
+    font-size: clamp(3rem, 5vw, 6rem);    /*check on (viewpoint width) naming. Responsive typography specifies min and max font size */
+ }
+
+ .blog-post-data .article-data{
+    margin-bottom: 2.5rem;
+ }
+
+ .blog-post-data img{
+    height: var(--item-min-height-md);
+    object-fit: cover;
+    object-position: center 10%;
+ }
+
+ .blog-post-container .container{
+    max-width: 90rem;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap);
+ }
+ .quote{
+  background-color: var(--secondary-background-color);
+  padding: 2.5rem;  
+ }
+
+ .quote p{
+    font-style: italic;
+ }
+
+ .quote span i{
+    font-size: 3.5rem;
+ }
+
+ .author{
+    margin-top: 5rem;
+    gap: var(--gap);
+    background-color: var(--secondary-background-color);
+ }
+
+ .author-image-box{
+    position: relative;
+ }
+
+ .author-about{
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+ }
+
+ .author-name{
+    color: var(--light-color);
+    font-weight: 400;
+ }
+
+ .author p{
+    max-width: 50rem;
+    margin-bottom: 1rem;
+ }
+
+ .author-about .social-media{
+    margin-top: auto;
+    margin-bottom: 0;
+ }
