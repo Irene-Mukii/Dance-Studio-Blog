@@ -17,3 +17,4 @@
 * CSS
 * Javascript
 
+## [License](./LICENSE)
